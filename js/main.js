@@ -88,6 +88,30 @@
 				items:2
 			}
 		}
-	});
+  });
+
+  $('#contact-form').on('submit', function(e) {
+    e.preventDefault()
+    var formSubmit = $('#form-submit')
+    formSubmit.prop('disabled', true)
+    formSubmit.val('Sending...')
+
+    axios.get('https://hooks.zapier.com/hooks/catch/688452/ehwbrh', {
+      params: {
+        name: $('#form-name').val(),
+        email: $('#form-email').val(),
+        subject: $('#form-subject').val(),
+        message: $('#form-message').val(),
+      }
+    })
+    .then(function (response) {
+      setTimeout(function() {
+        formSubmit.val('Message Sent!')
+      }, 1500)
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  })
 
 })(jQuery);

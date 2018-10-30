@@ -28,8 +28,6 @@
 	<!-- Custom stlylesheet -->
   <link type="text/css" rel="stylesheet" href="css/style.css" />
 
-	<link type="text/css" rel="stylesheet" href="css/main.css" />
-
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
@@ -53,7 +51,7 @@
 
 				<div class="navbar-header">
 					<!-- Logo -->
-					<div class="navbar-brand">
+					<div class="navbar-brand" style="padding-top: 4px;">
 						<a href="index.html">
 							<img class="logo" src="img/logo.png" alt="logo">
 							<img class="logo-alt" src="img/logo-alt.png" alt="logo">
@@ -267,44 +265,33 @@
 						<!-- testimonial -->
 						<div class="testimonial">
 							<div class="testimonial-meta">
-								<img src="./img/perso1.jpg" alt="">
+								<img src="./img/mingxiang.png" alt="">
 								<h3 class="white-text">Ming Xiang</h3>
-								<span>Team Leader</span>
+								<span>Tech Lead</span>
 							</div>
-							<p class="white-text">Molestie at elementum eu facilisis sed odio. Scelerisque in dictum non consectetur a erat. Aliquam id diam maecenas ultricies mi eget mauris.</p>
+							<p class="white-text">Ming Xiang provides tech leadership does project management for the team. He has managed multiple teams of developers across web and mobile tech stacks. He is passionate about functional programming and building well-tested codebases that are built to spec.</p>
 						</div>
 						<!-- /testimonial -->
 
 						<!-- testimonial -->
 						<div class="testimonial">
 							<div class="testimonial-meta">
-								<img src="./img/perso2.jpg" alt="">
+								<img src="./img/minghao.png" alt="">
 								<h3 class="white-text">Ming Hao</h3>
 								<span>Backend Engineer</span>
 							</div>
-							<p class="white-text">Molestie at elementum eu facilisis sed odio. Scelerisque in dictum non consectetur a erat. Aliquam id diam maecenas ultricies mi eget mauris.</p>
+							<p class="white-text">Ming Hao came to programming from a background in accounting. He loves improving processes and creating cohesive, well organized systems. Since learning coding, he has worked on Rails, React-Native and Redux applications.</p>
 						</div>
 						<!-- /testimonial -->
 
 						<!-- testimonial -->
 						<div class="testimonial">
 							<div class="testimonial-meta">
-								<img src="./img/perso2.jpg" alt="">
+								<img src="./img/liren.png" alt="">
 								<h3 class="white-text">Liren</h3>
 								<span>Frontend Engineer</span>
 							</div>
-							<p class="white-text">Molestie at elementum eu facilisis sed odio. Scelerisque in dictum non consectetur a erat. Aliquam id diam maecenas ultricies mi eget mauris.</p>
-						</div>
-						<!-- /testimonial -->
-
-						<!-- testimonial -->
-						<div class="testimonial">
-							<div class="testimonial-meta">
-								<img src="./img/perso2.jpg" alt="">
-								<h3 class="white-text">Josh Teng</h3>
-								<span>SCRUM Master</span>
-							</div>
-							<p class="white-text">Molestie at elementum eu facilisis sed odio. Scelerisque in dictum non consectetur a erat. Aliquam id diam maecenas ultricies mi eget mauris.</p>
+							<p class="white-text">Liren is a perfectionist who strives for good design in everything he builds, both software and artistically. He has a keen eye for detail and does not compromise on creating the best UX for the end user.</p>
 						</div>
 						<!-- /testimonial -->
 
@@ -362,12 +349,12 @@
 
 				<!-- contact form -->
 				<div class="col-md-8 col-md-offset-2">
-					<form class="contact-form">
-						<input type="text" class="input" placeholder="Name">
-						<input type="email" class="input" placeholder="Email">
-						<input type="text" class="input" placeholder="Subject">
-						<textarea class="input" placeholder="Message"></textarea>
-						<button class="main-btn">Send message</button>
+					<form id="contact-form" class="contact-form">
+						<input id="form-name" type="text" class="input" placeholder="Name">
+						<input id="form-email" type="email" class="input" placeholder="Email">
+						<input id="form-subject" type="text" class="input" placeholder="Subject">
+						<textarea id="form-message" class="input" placeholder="Message"></textarea>
+						<input id="form-submit" type="submit" class="main-btn" value="Send Message">
 					</form>
 				</div>
 				<!-- /contact form -->
@@ -395,7 +382,7 @@
 
 					<!-- footer logo -->
 					<div class="footer-logo">
-						<a href="index.html"><img src="img/logo-alt.png" alt="logo"></a>
+						<a href="index.html"><img src="img/logo-alt.png" alt="logo" style="max-width: 90vw;"></a>
 					</div>
 					<!-- /footer logo -->
 
@@ -442,7 +429,8 @@
 	</div>
 	<!-- /Preloader -->
 
-	<!-- jQuery Plugins -->
+  <!-- jQuery Plugins -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
